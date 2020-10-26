@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminHelloWord.master.cs" Inherits="Proyecto_IPC2_1S2020.Paginas.AdminHelloWord" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #111;
+                }
+
+        .active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body style="background-color: #0A1747">
+    <form id="form1" runat="server">
+        <ul>
+            <li style="float: left">
+                <asp:HyperLink runat="server" CssClass="register-form" NavigateUrl="~/Paginas/Login.aspx" ForeColor="#FFFF05">Cerrar Sesion</asp:HyperLink></li>
+            <li style="float: right">
+                <asp:HyperLink runat="server" CssClass="register-form" NavigateUrl="~/Paginas/AH/usuariosAH.aspx" ForeColor="#FFFF05">Usuarios</asp:HyperLink></li>
+            <li style="float: right">
+                <asp:HyperLink runat="server" CssClass="register-form" NavigateUrl="~/Paginas/AH/clientesAH.aspx" ForeColor="#FFFF05">Clientes</asp:HyperLink></li>
+            <li style="float: right">
+                <asp:HyperLink runat="server" CssClass="register-form" NavigateUrl="~/Paginas/AH/modulosAH.aspx" ForeColor="#FFFF05">Modulos</asp:HyperLink></li>
+        </ul>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
+
